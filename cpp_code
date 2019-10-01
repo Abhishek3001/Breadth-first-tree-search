@@ -1,0 +1,24 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+	fstream hello("Yo man.txt",ios::out);
+	char name,ch;
+		ch='y';
+	float marks;
+
+	while(ch=='y')
+	{
+		cout<<"Enter name and marks respectively"<<endl;
+		cin>>name;
+		cin>>marks;
+		hello<<name<<" "<<marks<<endl;
+		cout<<"Want more"<<endl;
+		cin>>ch;
+	}
+	
+
+	hello.close();
+	return 0;
+}
