@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+
+int i;
+class Stack{
+	int a[100];
+	
+	public:
+		Stack(){
+			int i;
+			for(i=0;i<99;i++){
+				a[i]=0;
+			}
+			i=0;
+		}
+		~Stack(){
+			cout<<"Destructor Called";
+		}
+		void push(){
+			cin>>a[i];
+			cout<<"Value pushed:"<<a[i]<<endl;
+			i++;
+		}
+		void pop(){
+			i--;
+			cout<<"Value poped:"<<a[i]<<endl;
+		}
+		bool isEmpty(){
+			if(i==0)
+			return 1;
+			else
+			return 0;
+		}
+		bool isFull(){
+			if(i==100)
+			return 1;
+			else
+			return 0;
+		}
+};
+
+int main(){
+	Stack s;
+	int j,k;
+	s.push();
+	s.push();
+	s.push();
+	s.isEmpty();
+	s.pop();
+	s.pop();
+	s.pop();
+	s.isFull();
+}
